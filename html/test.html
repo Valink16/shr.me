@@ -1,0 +1,23 @@
+<form id="add_form" action="/api/add" method="POST">
+	<div id="add-link-container">
+		<label for="Short link">Short link</label>
+		<input title="Short link" name="short" id="short-input" maxlength="6" type="text">
+		<label for="Long link">Long link</label>
+		<input title="Long link" placeholder="https://google.com" name="long" id="long-input" type="text">
+	</div>
+	<input type="submit" value="Add">
+</form>
+
+<form action="http://www.foo.com" method="POST">
+	<div>
+	  <label for="say">What greeting do you want to say?</label>
+	  <input name="say" id="say" value="Hi">
+	</div>
+	<div>
+	  <label for="to">Who do you want to say it to?</label>
+	  <input name="to" id="to" value="Mom">
+	</div>
+	<div>
+	  <button>Send my greetings</button>
+	</div>
+  </form>

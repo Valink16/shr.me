@@ -1,0 +1,58 @@
+#add-link-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 0.5em 0;
+	margin-top: 1em;
+}
+
+input[type="text"] {
+	border: 0.15em solid rgb(119, 115, 222);
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0.5em;
+	font-family: "Ubuntu";
+}
+
+#short-input {
+	width: 6ch;
+}
+
+#long-input {
+	width: 20ch;
+}
+
+input[type="text"]:focus {
+	outline: none !important;
+}
+
+label {
+	align-self: center;
+	justify-self: end;
+	font-weight: bolder;
+}
+
+#add-link-container > label {
+	margin-right: 4em;
+}
+
+input[type="button"] {
+	font-family: "Ubuntu";
+	font-size: 1em;
+	font-weight: bold;
+	background-color: rgb(171, 189, 220);
+	border: 0.1em solid rgb(119, 115, 222);
+	margin: 0.5em;
+}
+
+input[type="button"]:active {
+	background-color: white;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+#message {
+	height: 1em;
+	margin-top: 2em;
+}

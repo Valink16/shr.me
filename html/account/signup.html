@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/static/signupstyle.css">
+<article>
+	<div id="message"></div>
+	<form id="signin_form">
+		<div id="text-field-container">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name">
+
+			<label for="age">Age</label>
+			<input type="number" name="age" id="age">
+
+			<label for="born">Username</label>
+			<input type="date" name="born" id="born">
+
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username">
+
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password">
+		</div>
+
+		<input type="button" value="Sign up" onclick="signup()">
+	</form>
+</article>
+
+<script>
+	document.onkeypress = function(e) {
+		e = e || window.event;
+		if (e.keyCode == 13) {
+			signup()
+		}
+	}
+
+	function signup() {
+		let data = new URLSearchParams(Object.fromEntries(new FormData(signin_form))).toString()
+		let req = new Request("/api/signup", {
+			method: "POST",
+			body: data,
+			headers: {
+				"Content-Type" : "application/x-www-form-urlencoded",
+				"Cookie": document.cookie
+			}
+		})
+
+		fetch(req)
+			.then(response => {
+				if (response.status == 200) { // Redirect when OK
+					window.location.replace("/")
+				} else {
+					response.text()
+						.then(s => message.innerHTML = s)
+				}
+			})
+	}
+</script>

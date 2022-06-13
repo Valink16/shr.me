@@ -1,0 +1,111 @@
+:root {
+	--main: rgb(161, 124, 220);
+	--main-semi-transparent: rgba(161, 124, 220, 0.5)
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("./Ubuntu-Regular.ttf");
+}
+
+html {
+	height: 100%;
+	background-color: var(--main-semi-transparent);
+	/* background-image: linear-gradient(90deg, #b184cf 0%, #ff0000 50%, #4591fc 100%);;
+	background-size: 500%;
+	animation-name: body_background;
+	animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+	animation-duration: 10s;
+	animation-iteration-count: infinite; */
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(117, 152, 182);
+}
+
+header {
+	font-size: 4em;
+	padding: 0.2em;
+	text-align: center;
+	font-family: "Ubuntu";
+	font-weight: bold;
+	background-color: var(--main);
+	color: white;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+}
+
+nav > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	height: 4em;
+	background-color: var(--main);
+	transition: background-color 500ms;
+	text-align: center;
+	font-family: "Ubuntu";
+	text-decoration: none;
+	color: white;
+}
+
+nav > a:hover {
+	background-color: rgba(161, 124, 220, 0.7);
+	color: white;
+	transition: 0 cubic-bezier(0.075, 0.82, 0.165, 1);
+	/* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-left: 1em;
+	margin-right: 1em;
+	font-family: "Ubuntu";
+	flex-grow: 1;
+}
+
+footer {
+	display: flex;
+	font-family: "Ubuntu";
+	font-size: 0.75em;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 0.1;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 2em 0;
+	table-layout: fixed;
+	width: 100%;
+}
+
+@keyframes body_background {
+	from {
+		background-position: 0% 0%;
+	}
+
+	to {
+		background-position: 100% 100%;
+	}
+}
