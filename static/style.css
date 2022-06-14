@@ -11,13 +11,6 @@
 html {
 	height: 100%;
 	background-color: var(--main-semi-transparent);
-	/* background-image: linear-gradient(90deg, #b184cf 0%, #ff0000 50%, #4591fc 100%);;
-	background-size: 500%;
-	animation-name: body_background;
-	animation-timing-function: linear;
-	animation-direction: alternate-reverse;
-	animation-duration: 10s;
-	animation-iteration-count: infinite; */
 }
 
 body {
@@ -26,6 +19,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 0;
+	font-family: "Ubuntu";
 }
 
 a {
@@ -40,7 +34,6 @@ header {
 	font-size: 4em;
 	padding: 0.2em;
 	text-align: center;
-	font-family: "Ubuntu";
 	font-weight: bold;
 	background-color: var(--main);
 	color: white;
@@ -60,7 +53,6 @@ nav > a {
 	background-color: var(--main);
 	transition: background-color 500ms;
 	text-align: center;
-	font-family: "Ubuntu";
 	text-decoration: none;
 	color: white;
 }
@@ -69,7 +61,6 @@ nav > a:hover {
 	background-color: rgba(161, 124, 220, 0.7);
 	color: white;
 	transition: 0 cubic-bezier(0.075, 0.82, 0.165, 1);
-	/* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 article {
@@ -79,13 +70,11 @@ article {
 	text-align: center;
 	margin-left: 1em;
 	margin-right: 1em;
-	font-family: "Ubuntu";
 	flex-grow: 1;
 }
 
 footer {
 	display: flex;
-	font-family: "Ubuntu";
 	font-size: 0.75em;
 	justify-content: center;
 	align-items: center;
@@ -98,14 +87,4 @@ table {
 	border-spacing: 2em 0;
 	table-layout: fixed;
 	width: 100%;
-}
-
-@keyframes body_background {
-	from {
-		background-position: 0% 0%;
-	}
-
-	to {
-		background-position: 100% 100%;
-	}
 }

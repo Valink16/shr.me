@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="/static/loginstyle.css">
+<link rel="stylesheet" href="/static/authstyle.css">
 <article>
 	<div id="message"></div>
 	<form id="login_form">
-		<div id="login-text-field-container">
+		<div id="text-field-container">
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username">
 
@@ -29,7 +29,7 @@
 			body: new URLSearchParams(Object.fromEntries(new FormData(login_form))).toString(),
 			headers: {
 				"Content-Type" : "application/x-www-form-urlencoded",
-				"Cookie": document.cookie
+				"Cookie": document.cookie // Contains the session ID
 			}
 		})
 

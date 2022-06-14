@@ -4,7 +4,7 @@
 	<h2>Welcome {{ .User.Name }} !</h2>
 	<h3> Your data </h3>
 	<label>Age: {{ .User.Age }}</label>
-	<label>Born: {{.User.Born}}</label>
+	<label>Born: {{ .User.Born }}</label>
 	<h3>Links</h3>
 	<table>
 		<thead>
@@ -59,8 +59,6 @@
 	function remove(shortUrl) {
 		var url = new URL("/api/delete", location.origin)
 		url.searchParams.append("short", shortUrl)
-
-		console.log(url)
 
 		let req = new Request(url, {
 			method: "DELETE",
